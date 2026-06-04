@@ -1,4 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
+// Alias para compatibilidade com traduções (console.erro = console.error)
+if (!console.erro) console.erro = console.error.bind(console)
 import './config.js'
 import './plugins/_content.js'
 import { createRequire } from 'module'
