@@ -76,7 +76,7 @@
     "similarity": "^1.2.1",
     "socket.io": "^4.4.1",
     "fuzzysort": "^1.0.0",
-    "syntax-erro": "^1.4.0",
+    "syntax-error": "^1.4.0",
     "terminal-image": "^2.0.0",
     "url-regex-safe": "^3.0.0",
     "javascript-obfuscator": "^4.0.0",
