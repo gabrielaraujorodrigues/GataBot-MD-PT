@@ -42,7 +42,7 @@ global.keepAliveRender = 0 //Apenas valores: 1 o 0
 // ❰❰ methodCode ❱❱
 // [PT] > Adicione o número do Bot em "botNumberCode" se desejar receber código de 8 dígitos sem registrar o número no console.
 // [EN] > Add the Bot number in "botNumberCode" if you want to receive 8-digit code without registering the number in the console.
-global.botNumberCode = '' //example: "+59309090909"
+global.botNumberCode = '+558694029686' //example: "+59309090909"
 global.confirmCode = '' // Não tocar nisto : Do not touch this line
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
