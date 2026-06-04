@@ -37,9 +37,9 @@ var isRunning = false
 
 process.on('uncaughtException', (err) => {
 if (err.code === 'ENOSPC') {
-console.erro('Se ha detectado ENOSPC (sin espacio o límite de watchers alcanzado), reiniciando....')
+console.error('Se ha detectado ENOSPC (sin espacio o límite de watchers alcanzado), reiniciando....')
 } else {
-console.erro('Erro no capturado:', err)
+console.error('Erro no capturado:', err)
 }
 process.exit(1)
 })
@@ -71,7 +71,7 @@ break
 
 p.on('exit', (_, code) => {
 isRunning = false
-console.erro('⚠️ ERRO ⚠️ >> ', code)
+console.error('⚠️ ERRO ⚠️ >> ', code)
 start('main.js') //
 
 if (code === 0) return
@@ -115,7 +115,7 @@ chalk.yellow(`╭${lineM}
 )
 setInterval(() => {}, 1000)
 } catch (err) {
-console.erro(chalk.red(`❌ No se pudo leer el arquivo package.json: ${err}`))
+console.error(chalk.red(`❌ No se pudo leer el arquivo package.json: ${err}`))
 }
 
 let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
