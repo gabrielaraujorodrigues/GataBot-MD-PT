@@ -386,6 +386,13 @@ setTimeout(async () => {
 let codeBot = await conn.requestPairingCode(addNumber)
 codeBot = codeBot?.match(/.{1,4}/g)?.join('-') || codeBot
 console.log(chalk.bold.white(chalk.bgMagenta(mid.pairingCode)), chalk.bold.white(chalk.white(codeBot)))
+// Salvar código em arquivo e imprimir de forma visível
+try {
+  fs.writeFileSync('./pairing_code.txt', codeBot)
+  process.stdout.write('\n========================================\n')
+  process.stdout.write('CODIGO_EMPARELHAMENTO: ' + codeBot + '\n')
+  process.stdout.write('========================================\n\n')
+} catch(e) { console.log('code-save-err', e.message) }
 }, 2000)
 }
 }
