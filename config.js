@@ -33,7 +33,7 @@ global.isBaileysFail = false
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // ❰❰ RENDER ❱❱
 //Kurt18: Obter o código QR pela URL do Hosting
-global.obtenerQrWeb = 0 //Apenas valores: 1 o 0
+global.obtenerQrWeb = 1 //Apenas valores: 1 o 0
 //Kurt18: Aplica para Host Render.com
 global.keepAliveRender = 0 //Apenas valores: 1 o 0
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
