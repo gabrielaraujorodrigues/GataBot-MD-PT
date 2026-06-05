@@ -1,19 +1,20 @@
 FROM node:24-bookworm-slim
 
 RUN apt-get update && \
-apt-get install -y \
+apt-get install -y --no-install-recommends \
 ffmpeg \
 imagemagick \
 webp && \
-apt-get upgrade -y && \
 rm -rf /var/lib/apt/lists/*
 
-COPY package.json .
+WORKDIR /app
 
-RUN npm install && npm install qrcode-terminal
+COPY package.json ./
+
+RUN NODE_OPTIONS="--max-old-space-size=400" npm install --no-audit --no-fund
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 8000
 
-CMD ["node", "index.js"]
+CMD ["node", "index.js", "--server"]
