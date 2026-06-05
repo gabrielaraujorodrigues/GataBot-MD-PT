@@ -1,7 +1,7 @@
 import { dirname, join } from 'path'
 import { createRequire } from 'module'
 import { fileURLToPath } from 'url'
-import { fork, setupMaster } from 'cluster'
+import { fork, setupPrimary } from 'cluster'
 import { unwatchFile, watchFile } from 'fs'
 import cfonts from 'cfonts'
 import { createInterface } from 'readline'
@@ -54,7 +54,7 @@ font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']
 })
-setupMaster({exec: args[0], args: args.slice(1)})
+setupPrimary({exec: args[0], args: args.slice(1)})
 let p = fork()
 p.on('message', (data) => {
 switch (data) {
